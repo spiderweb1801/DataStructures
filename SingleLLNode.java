@@ -1,16 +1,6 @@
 package DS.DS;
 
 public class SingleLLNode {
-
-/*	addFirst()
-	getFirst()
-	getLast()
-	addLast()
-	search()
-	removeFirst()
-	removeLast()
-	addAt()
-	valueAt()*/
 	
 	SingleLLNode next;
 	int value;
