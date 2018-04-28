@@ -10,10 +10,22 @@ public class DoublyLinkedList {
 	}
 	//2.add first element a
 	public void addFirst(int a) {
+		DoublyLLNode curr= new DoublyLLNode(a);
 		
+		if(size==0)
+			head=curr;
+		
+		else
+		{
+			curr.next=head;
+			head=curr;
+		}
+		size++;
 	}
 	//3.add last element a
 	public void addLast(int a) {
+		
+		
 		
 	}
 	//4.remove first element 
@@ -58,6 +70,17 @@ public class DoublyLinkedList {
 	public void reverseLinkedList() {
 		
 	}
+	//14.PrintList
+	public void printList()
+	{
+		DoublyLLNode temp=head;
+		while(temp!=null)
+		{
+			System.out.println(temp.value);
+			temp=temp.next;
+		}
+	}
+	
 	
 	
 }
