@@ -3,17 +3,17 @@ package DS.DS;
 public class Stack {
 
 	int size;
-	int arr[];
+	char arr[];
 	
 	public Stack() {
-		arr= new int[10];
+		arr= new char[10];
 	}
 	
 	public Stack(int capacity) {
-		arr= new int[capacity];
+		arr= new char[capacity];
 	}
 
-	public void push(int a) {
+	public void push(char a) {
 		
 		if(size==arr.length)
 		 System.out.println("Element cannot be added into the stack.");
@@ -25,25 +25,25 @@ public class Stack {
 		
 	}
 	
-	public int pop() {
-		int ret=0;
+	public char pop() {
+		char ret=0;
 		if(size==0) {
-			ret=-1;
+			ret=0;
 		}
 		
 		else {
 			size--;
 			ret=arr[size];
-			size--;
+			//size--;
 		}
 		
 		return ret;
 	}
 	
-	public int peep() {
-		int ret=0;
+	public char peep() {
+		char ret=0;
 		if(size<=0) {
-			ret=-1;
+			ret=0;
 		}
 		
 		else {
