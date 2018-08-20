@@ -23,6 +23,8 @@ public class Queue {
 	
 	public void add(int a)
 	{
+		//System.out.println(tail+"=tail in add method b4 anything. Size is:"+size+". Head is:"+head);
+		
 		if(isFull())
 			{
 				if(tail==maxSize-1)
@@ -30,10 +32,18 @@ public class Queue {
 				else
 					tail++;
 				
-				head++;
+				if(head==maxSize-1)
+					head=0;
+				else
+					head++;
 			}
 		else
-			tail++;
+		{
+			if(tail==maxSize-1)
+				tail=0;
+			else
+				tail++;
+		}
 		
 		arr[tail]=a;
 		
@@ -41,11 +51,14 @@ public class Queue {
 			size++;
 			
 		else{}
+		//System.out.println(tail+"=tail. Size is:"+size+". Arr[tail] is="+arr[tail]);
 	}
 	
 	public int remove()
 	{
 		int get=0;
+
+		//System.out.println(tail+"=tail in removed Queue b4 removing. Size is:"+size+". Removing data is"+arr[head]);
 		
 		if(!isEmpty())
 		{
@@ -62,6 +75,7 @@ public class Queue {
 		else
 			{get=-10;size=0;}
 		
+		//System.out.println(tail+"=tail in removed Queue. Size is:"+size+". Removed data is"+get);
 		return get;
 		
 	}
